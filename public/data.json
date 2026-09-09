@@ -6,7 +6,7 @@
     "playertype": "Batsman",
     "bollingstyle": "Right-arm medium",
     "battingstyle": "Right-hand bat",
-    "price": 1500000
+    "price": 700
   },
   {
     "playername": "Babar Azam",
@@ -15,7 +15,7 @@
     "playertype": "Batsman",
     "bollingstyle": "Right-arm off break",
     "battingstyle": "Right-hand bat",
-    "price": 1400000
+    "price": 600
   },
   {
     "playername": "Shakib Al Hasan",
@@ -24,7 +24,7 @@
     "playertype": "All-rounder",
     "bollingstyle": "Left-arm orthodox",
     "battingstyle": "Left-hand bat",
-    "price": 1200000
+    "price": 1200
   },
   {
     "playername": "Jasprit Bumrah",
@@ -33,7 +33,7 @@
     "playertype": "Bowler",
     "bollingstyle": "Right-arm fast",
     "battingstyle": "Right-hand bat",
-    "price": 1300000
+    "price": 130
   },
   {
     "playername": "Rashid Khan",
@@ -42,7 +42,7 @@
     "playertype": "Bowler",
     "bollingstyle": "Right-arm leg break",
     "battingstyle": "Right-hand bat",
-    "price": 1100000
+    "price": 1100
   },
   {
     "playername": "Jos Buttler",
@@ -51,7 +51,7 @@
     "playertype": "Wicketkeeper-Batsman",
     "bollingstyle": "Right-arm medium",
     "battingstyle": "Right-hand bat",
-    "price": 1350000
+    "price": 500
   },
   {
     "playername": "Kane Williamson",
@@ -60,7 +60,7 @@
     "playertype": "Batsman",
     "bollingstyle": "Right-arm off break",
     "battingstyle": "Right-hand bat",
-    "price": 1250000
+    "price": 400
   },
   {
     "playername": "Pat Cummins",
@@ -69,7 +69,7 @@
     "playertype": "Bowler",
     "bollingstyle": "Right-arm fast",
     "battingstyle": "Right-hand bat",
-    "price": 1450000
+    "price": 1450
   },
   {
     "playername": "Rohit Sharma",
@@ -78,7 +78,7 @@
     "playertype": "Batsman",
     "bollingstyle": "Right-arm off break",
     "battingstyle": "Right-hand bat",
-    "price": 1400000
+    "price": 500
   },
   {
     "playername": "Shahriar Nafees",
@@ -87,6 +87,6 @@
     "playertype": "Batsman",
     "bollingstyle": "Right-arm medium",
     "battingstyle": "Left-hand bat",
-    "price": 850000
+    "price": 500
   }
 ]

@@ -1,12 +1,40 @@
-import { FaUserAlt } from "react-icons/fa";
-import type { IPlayer } from "../../Types/type"
+import { FaUserAlt } from 'react-icons/fa';
+import type { IPlayer } from '../../Types/type';
+import { useState, type Dispatch, type SetStateAction } from 'react';
+import { toast } from 'react-toastify';
 
 export interface PlayerCardProps {
-  player: IPlayer
+  player: IPlayer;
+  coin: number;
+  setCoin: Dispatch<SetStateAction<number>>;
+  selectedPlayers: IPlayer[];
+  setSelectedPlayers: Dispatch<SetStateAction<IPlayer[]>>;
 }
 
-export default function PlayerCard({ player }: PlayerCardProps) {
-  
+export default function PlayerCard({
+  player,
+  coin,
+  setCoin,
+  selectedPlayers,
+  setSelectedPlayers,
+}: PlayerCardProps) {
+  const [isSelected, setIsSelected] = useState(false);
+
+  const handlePlayerChoose = () => {
+    setIsSelected(true);
+
+    const availableCoin = coin - player.price;
+
+    if (availableCoin >= 0) {
+      setCoin(availableCoin);
+      toast.success(`${player.playername} purchased successfully`);
+    } else {
+      toast.error(`You are out of COIN...`);
+    }
+
+    setSelectedPlayers([...selectedPlayers, player]);
+  };
+
   return (
     <div className="w-full max-w-sm overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
       {/* Player Image */}
@@ -24,7 +52,6 @@ export default function PlayerCard({ player }: PlayerCardProps) {
         <div className="mb-4 flex items-center justify-between gap-3">
           <div>
             <h2 className="text-xl font-bold text-gray-900 flex gap-2 items-center">
-              
               <FaUserAlt />
               {player.playername}
             </h2>
@@ -64,8 +91,14 @@ export default function PlayerCard({ player }: PlayerCardProps) {
             <p className="text-2xl font-bold text-green-600">${player.price}</p>
           </div>
 
-          <button className="rounded-lg bg-green-600 px-5 py-2.5 font-semibold text-white transition hover:bg-green-700 active:scale-95">
-            Choose Player
+          <button
+            onClick={() => handlePlayerChoose()}
+            className={
+              'rounded-lg bg-green-600 px-5 py-2.5 font-semibold text-white transition hover:bg-green-700 active:scale-95'
+            }
+            disabled={isSelected}
+          >
+            {isSelected ? 'Selected' : 'Choose Player'}
           </button>
         </div>
       </div>
